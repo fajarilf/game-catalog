@@ -1,12 +1,16 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue';
+// mport { RouterLink, RouterView } from 'vue-router'
 import navbarComponent from './components/navbarComponent.vue';
+import carouselComponent from './components/carouselComponent.vue';
 </script>
 
 <template>
   <header class="text-bg-primary">
     <navbarComponent title="NAVBAR" />
   </header>
+
+  <carouselComponent />
 </template>
 
 <style scoped>
