@@ -10,7 +10,7 @@ const menus = ref(["Home", "About", "Genre", "Platform"])
 </script>
 
 <template>
-    <div class="container d-flex align-items-center p-3">
+    <div class="container d-flex align-items-center p-3 fixed-top">
         <mainTitle :value="props.title" />
         <menuList :menus="menus" />
     </div>
