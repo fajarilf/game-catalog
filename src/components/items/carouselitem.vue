@@ -15,8 +15,7 @@ const activeClass = (id) => {
     <div class="carousel-item" v-for="data in datas" :class="activeClass(String(data.id))">
         <div class="d-flex justify-content-center">
             <div class="black-box"></div>
-            <img :src="data.img" alt="item" class="d-block img-fluid" style="width: 75%;">
-            <div class="black-box2"></div>
+            <img :src="data.img" alt="item" class="d-block img-fluid w-75">
         </div>
         <div class="carousel-caption d-none d-md-block">
             <h5>{{ data.title }}</h5>

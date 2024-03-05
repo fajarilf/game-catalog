@@ -1,19 +1,41 @@
 <script setup>
-import { ref } from 'vue';
+import { provide, ref } from 'vue';
 // mport { RouterLink, RouterView } from 'vue-router'
 import navbarComponent from './components/navbarComponent.vue';
 import carouselComponent from './components/carouselComponent.vue';
+import platformList from './components/platformList.vue';
+import gameListComponent from './components/gameListComponent.vue';
+
+const data = ref({
+  navbarMenu: [
+    { id: "#Home", title: "Home" },
+    { id: "#About", title: "About" },
+    { id: "#Platform", title: "Platform" },
+    { id: "#Genre", title: "Genre" },
+  ],
+})
+
+provide('id', data.value.navbarMenu)
+
 </script>
 
 <template>
-  <header class="text-bg-primary">
+  <header id="Home">
     <navbarComponent title="NAVBAR" />
+    <section id="hero">
+      <carouselComponent />
+    </section>
   </header>
 
-  <carouselComponent />
+  <main class="container-fluid" id="About">
+    <section>
+      <platformList />
+      <gameListComponent title="Popular Game" />
+    </section>
+  </main>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -75,4 +97,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+</style> -->
