@@ -39,7 +39,7 @@ const data = ref({
 </script>
 
 <template>
-    <div class="text-white ms-5 me-5">
+    <div class="text-white mx-5">
         <div class="d-flex w-100">
             <h4 class="me-auto" style="margin: 0px;">{{ title }}</h4>
             <div class="d-flex justify-content-end btn-group" role="group">

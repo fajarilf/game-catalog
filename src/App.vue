@@ -5,6 +5,7 @@ import navbarComponent from './components/navbarComponent.vue';
 import carouselComponent from './components/carouselComponent.vue';
 import platformList from './components/platformList.vue';
 import gameListComponent from './components/gameListComponent.vue';
+import genreComponent from './components/genreComponent.vue'
 
 const data = ref({
   navbarMenu: [
@@ -31,6 +32,10 @@ provide('id', data.value.navbarMenu)
     <section>
       <platformList />
       <gameListComponent title="Popular Game" />
+    </section>
+
+    <section>
+      <genreComponent title="Genre" />
     </section>
   </main>
 </template>
